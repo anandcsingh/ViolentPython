@@ -19,7 +19,7 @@ def bruteLogin(hostname, passwordFile):
 
 host = 'ftp.anandcsingh.com'
 passwordFile = 'userpass.txt'
-bruteLogin(host, passwordFile)
+#bruteLogin(host, passwordFile)
         
 
         

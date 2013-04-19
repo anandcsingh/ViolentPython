@@ -19,11 +19,11 @@ def getFtpPages(ftp):
 host = 'ftp.anandcsingh.com'
 user = 'todotnt'
 password = 'p@ssw0rd'
-ftp = ftplib.FTP(host)
+'''ftp = ftplib.FTP(host)
 ftp.login(user, password)
 print '\n[+] FTP connected'
 getFtpPages(ftp)
 ftp.quit()
-    
+''' 
         
 
