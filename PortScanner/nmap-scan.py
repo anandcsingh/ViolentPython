@@ -1,7 +1,8 @@
 import sys
 import nmap
 import optparse
-#sys.path.append("C:\Users\asingh\Documents\GitHub\ViolentPython\Scripts")
+import os
+sys.path.append(os.path.realpath('../scripts'))
 from Args import *
 
 def nmapScan(tgtHost, tgtPort):
@@ -11,9 +12,12 @@ def nmapScan(tgtHost, tgtPort):
     print ' [*] ' + tgtHost + ' tcp/' + tgtPort + ' ' + state
 
 def main():
-    args = Args({'-H': 'alpha', '-p': 'omega' })
-    argsResult = args.getArgs()
-    print argsResult.alpha
+    args = Args({'-H': 'tgtHost', '-p': 'tgtPort' })
+    options = args.getArgs()
+    tgtHost = options.tgtHost
+    tgtPorts = str(options.tgtPort).split(', ')
+    for tgtPort in tgtPorts:
+        nmapScan(tgtHost, tgtPort)
         
 if __name__ == "__main__":
     main()
